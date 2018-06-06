@@ -1,0 +1,135 @@
+* {
+  border-radius: 2px;
+}
+
+h1 {
+  font-family: "Delius", cursive;
+  font-size: 5em;
+  color: #ffffff;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p, ul, .reasons {
+  font-family: Nunito, sans-serif;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  text-shadow: 1px 1px 0px #444444;
+  color: #fff;
+}
+
+section {
+  margin: 150px 0;
+}
+
+/*NAVBAR*/
+#logo {
+  height: 100%;
+}
+
+#nav {
+  background-color: transparent;
+  border: none;
+  /*
+	border-bottom: 5px solid black ;
+	border-image-source: url(../../img/borders/border2.png);
+	border-image-slice: 15 1;
+ 	border-image-repeat: round;*/
+  padding: 1vw;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  padding: 4px 15px;
+}
+
+.navbar-header :hover {
+  color: #ffffff !important;
+}
+
+#links a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: transparent;
+  /* Changes regular toggle color */
+  border-color: white;
+  /* Changes toggle icon border color */
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #b1001a;
+}
+
+.active a {
+  background-color: #b1001a !important;
+}
+
+strong {
+  font-size: 1.5em;
+}
+
+.hero-image {
+  height: 50%;
+  background-image: -webkit-linear-gradient(145deg, transparent 50%, #ffffff 50%);
+  padding: 50px 0px;
+  margin-top: 0;
+  border: 15px solid #ffffff;
+}
+
+.building {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  text-align: center;
+  color: #0032b1;
+}
+
+#about {
+  color: #ffffff;
+  padding: 1vw;
+}
+
+.sectionImg {
+  padding: 1vw;
+}
+
+.sectionImg img {
+  width: 100%;
+}
+
+.reasons i {
+  font-size: 2em;
+  padding: 20px 0;
+}
+
+.form-group img {
+  width: 100%;
+}
+
+footer {
+  background: linear-gradient(rgba(0, 50, 177, 0.8), rgba(0, 50, 177, 0.8));
+  box-shadow: 10px 10px 5px red;
+}
+
+body {
+  background: linear-gradient(rgba(0, 50, 177, 0.8), rgba(0, 50, 177, 0.8)), url(../../img/bp/blueprint-9.png);
+  background-color: #0032b1;
+}
+/*# sourceMappingURL=style.css.map */
