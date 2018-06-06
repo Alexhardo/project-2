@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>booking</title>
+    <!-- <link rel="stylesheet" href="style.css">  -->
+</head>
+
+<body onload="courseClicked(event)">
+    <h1>booking
+        <br/><small><em>booking App</em></small>
+    </h1> Booking
+    <div id="booking-list">
+        <p id="output"></p>
+    </div>
+    <section id="add-course-module">
+        <!-- <button id="open-add-course-form-btn">+</button> -->
+        <form>
+            <h2>Book course</h2> First Name*:
+            <br>
+            <input type='text' data-key='fname' class='course-input'>
+            <br> Last Name*:
+            <br>
+            <input type='text' data-key='lname' class='course-input'>
+            <br> birthdate*:
+            <br>
+            <input type='text' data-key='birthdate' class='course-input' placeholder="dd.mm.yyyy">
+            <br> educational background*:
+            <br>
+            <select type='text' data-key='eb' class='course-input'>
+                <option value="school">High School</option>
+                <option value="uni">Univercity</option>
+                <option value="other">Other</option>
+            </select>
+            <br> phone nummber*:
+            <br>
+            <input type='text' data-key='phone' class='course-input'>
+            <br> email*:
+            <br>
+            <input type='text' data-key='email' class='course-input'>
+            <br>
+            <!-- <br> Upload img:
+            <br>
+            <input type='file' data-key='upload' class='course-input'>-->
+            <br>
+            <br>
+            <button type='button' id="add-course-btn">add course</button>
+        </form>
+    </section>
+    <!--   edit course module 
+    <section id="edit-course-module">
+        <form>
+            <h2>Edit course</h2>
+            <input type="hidden" class="edit-courseid"> name:
+            <br>
+            <input type='text' data-key='name' class='edit-course-input'>
+            <br> price:
+            <br>
+            <input type='text' data-key='price' class='edit-course-input'>
+            <br> description:
+            <br>
+            <input type='text' data-key='description' class='edit-course-input'>
+            <br>start:
+            <br>
+            <input type='date' data-key='start' class='edit-course-input'>
+            <br> end:
+            <br>
+            <input type='date' data-key='end' class='edit-course-input'>
+            <br>
+            <br> Upload img:
+            <br>
+            <input type='file' data-key='img' class='edit-course-input'>
+            <br>
+            <br>
+            <button type='button' id="edit-course-btn">save</button>
+        </form>
+    </section>-->
+    <!-- show course module -->
+    <!-- <ul id="course-list2"></ul> -->
+    <ul id="course-list"></ul>
+    <div id="course-detail"></div>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+   
+</body>
+
+</html>

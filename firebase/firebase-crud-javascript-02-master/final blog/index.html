@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>âdd lbog</title>
+    <!-- <link rel="stylesheet" href="style.css">  -->
+</head>
+
+<body>
+    <h1>blog
+        <br/><small><em>blog App</em></small>
+    </h1>
+    <!-- add blog module -->
+    <section id="add-blog-module">
+        <form>
+            <h2>Add blog</h2> Title:
+            <br>
+            <input type='text' data-key='name' class='blog-input'>            
+            <br> Blog:
+            <br>
+            <textarea rows="4" cols="50" data-key='textarea' class='blog-input'>
+            </textarea>
+            <br> Upload img:
+            <br>
+            <input type='file' data-key='upload' class='blog-input'>
+            <br>
+            <br>
+            <button type='button' id="add-blog-btn">add blog</button>
+        </form>
+    </section>
+    <!-- edit blog module -->
+    <section id="edit-blog-module">
+        <form>
+            <h2>Edit blog</h2>
+            <input type="hidden" class="edit-blogid"> Title:
+            <br>
+            <input type='text' data-key='name' class='edit-blog-input'>
+            <br> Blog:
+            <br>
+            <textarea rows="4" cols="50" data-key='textarea' class='edit-blog-input'>
+            </textarea>
+            <br> Upload img:
+            <br>            
+            <br>
+            <input type='file' data-key='upload' class='edit-blog-input'>
+            <br>
+            <br>
+            <button type='button' id="edit-blog-btn">save</button>
+        </form>
+    </section>
+    <!-- show blog module -->
+    <ul id="blog-list"></ul>
+    <div id="blog-detail"></div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
