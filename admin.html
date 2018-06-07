@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--Custom Style-->
+    <link rel="stylesheet" href="style/css/style.css">
+    <title>BIM</title>
+    <style>
+    .well {
+        background: rgb(49, 49, 49);
+        color: #fff;
+        margin: 20px 0;
+        margin-bottom: 100px;
+    }
+
+    .admin-page {
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <!--Main Container-->
+    <div class="container-fluid admin-page">
+        <!--NAVBAR-->
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="">
+                    <!-- logo  -->
+                    <a class="navbar-brand" href="#"><strong>BIM</strong> Admin</a>
+                    <!-- company name -->
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!--Add Courses-->
+        <h1>Courses</h1>
+        <div id="add-course-module" class="col-sm-12 col-md-6">
+            <form id="addcourseform">
+                <h2>Add course</h2> name:
+                <br>
+                <input type='text' data-key='name' class='form-control course-input'>
+                <br> price:
+                <br>
+                <input type='text' data-key='price' class='form-control course-input'>
+                <br> description:
+                <br>
+                <input type='text' data-key='description' class='form-control course-input'>
+                <br> start:
+                <br>
+                <input type='date' data-key='start' class='form-control course-input'>
+                <br> end:
+                <br>
+                <input type='date' data-key='end' class='form-control course-input'>
+                <br>Image URL
+                <input type='text' data-key='img' class='form-control course-input'>
+                <br>
+                <br>
+                <button class="btn btn-success" type='button' id="add-course-btn">add course</button>
+            </form>
+        </div>
+        <!-- edit course  -->
+        <div id="edit-course-module" class="col-sm-12 col-md-6">
+            <form>
+                <h2>Edit course</h2>
+                <input type="hidden" class="edit-courseid"> name:
+                <br>
+                <input type='text' data-key='name' class='form-control edit-course-input'>
+                <br> price:
+                <br>
+                <input type='text' data-key='price' class=' form-control edit-course-input'>
+                <br> description:
+                <br>
+                <input type='text' data-key='description' class='form-control edit-course-input'>
+                <br>start:
+                <br>
+                <input type='date' data-key='start' class='form-control edit-course-input'>
+                <br> end:
+                <br>
+                <input type='date' data-key='end' class='form-control edit-course-input'>
+                <br>Image URL
+                <input type='text' data-key='img' class='form-control edit-course-input'>
+                <br>
+                <br>
+                <button class="btn btn-success" type='button' id="edit-course-btn">save</button>
+            </form>
+        </div>
+        <!-- end edit course  -->
+        <div class="col-sm-12">
+            <div class="well row">
+                <div class="col-sm-6">Cours Entries:
+                    <ul id="course-list"></ul>
+                </div>
+                <div id="course-detail" class="col-sm-6"></div>
+            </div>
+        </div>
+        <!-- new blog div  -->
+        <br>
+        <br>
+        <h1>blog</h1>
+        <!-- add blog module -->
+        <div id="add-blog-module" class="col-sm-12 col-md-6">
+            <form id="addblogform">
+                <h2>Add blog</h2> Title:
+                <br>
+                <input type='text' data-key='name' class='form-control blog-input'>
+                <br> Blog:
+                <br>
+                <textarea rows="4" cols="50" data-key='textarea' class='form-control blog-input'>
+                </textarea>
+                <br> Upload img:
+                <br>
+                <input type='text' data-key='upload' class='form-control blog-input'>
+                <br>
+                <br>
+                <button type='button' id="add-blog-btn" class="btn btn-success">add blog</button>
+            </form>
+        </div>
+        <!-- edit blog module -->
+        <div id="edit-blog-module" class="col-sm-12 col-md-6">
+            <form>
+                <h2>Edit blog</h2>
+                <input type="hidden" class="edit-blogid"> Title:
+                <br>
+                <input type='text' data-key='name' class='form-control edit-blog-input'>
+                <br> Blog:
+                <br>
+                <textarea rows="4" cols="50" data-key='textarea' class='form-control edit-blog-input'>
+                </textarea>
+                <br> Upload img:
+                <br>
+                <input type='text' data-key='upload' class='form-control edit-blog-input'>
+                <br>
+                <br>
+                <button class="btn btn-success" type='button' id="edit-blog-btn">save</button>
+            </form>
+        </div>
+        <!-- show blog module -->
+        <!-- end blog -->
+        <div class="col-sm-12">
+            <div class="well row">
+                <div class="col-sm-6">Blog Entries:
+                    <ul id="blog-list"></ul>
+                </div>
+                <div id="blog-detail" class="col-sm-6"></div>
+            </div>
+        </div>
+        <h1>Bookings</h1>
+        <div class="col-sm-12">
+            <div class="well row">
+                <div class="col-sm-6">BOOK
+                    <ol id="book-list"></ol>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script src="js/admin.js"></script>
+</body>
+
+</html>
